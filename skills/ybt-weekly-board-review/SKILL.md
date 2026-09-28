@@ -27,18 +27,22 @@ The weekly flash report from the YourBoardroomToday proposal (`projects/yourboar
    - Bank / cash position: Xero `get_cash_position`.
    - Owed to Jewel: portal `get_aged_receivables` (drafts included). Owed by Jewel: portal `get_aged_payables` (drafts included). Call out anything over 60 days and the largest balances.
    - Next weeks' cash: portal `get_weekly_cashflow_grid` (13-week plan). Report the weeks where net movement is most negative. Amounts are authoritative, timing is indicative (cash doctrine); say so.
-4. **Profit.** Xero `get_profit_and_loss` for the month to date and the prior month, and `get_financial_position` for the balance sheet. Note that project costs only reach a project once allocated; if the allocation queue is large, profit is qualified.
+   - Check the plan's income side before quoting its low point. If cash in is only invoices already raised, say plainly that the closing balance is not a forecast, and set it against the value still to be valued (revised contract sum less works complete, from step 6).
+   - Reconcile: grid supplier bills + excluded entries should equal aged payables; the grid's opening balance against Xero's bank figure; the portal's non-draft payables against Xero's. Report any gap as an exception.
+4. **Profit.** Xero `get_profit_and_loss` for the month to date and the same days of the prior month, and `get_financial_position` for the balance sheet. Draft bills do not reach the P&L, so a month with many drafts or an empty CIS labour line shows inflated profit: compare cost of sales with the prior month and qualify the profit line when it is clearly incomplete. Report odd balance-sheet signs (e.g. negative current assets) as exceptions for the accountant; don't interpret them.
 5. **Allocation and books quality gate.** Portal `list_xero_ledger_lines` with no status and read its `tabBar` (`toCode`, `workOrderBills`, `labourOutstanding`, `awaitingAction`), never the raw unallocated count. `get_xero_cost_code_option_gaps` for mapping gaps. Anything outstanding here is a data-quality exception that qualifies the finance section.
 6. **Projects.** `list_projects`, then for each live project (LiveDelivery, CloseOut, DefectsPeriod):
-   - `list_valuations` for the latest claim, its status and what is certified or awaiting payment;
+   - `list_valuations` for the latest claim, its status and what is certified or awaiting payment. A locked claim with no invoice is cash not yet asked for: flag it with days since lock, and check receivables to see whether it was raised outside the portal;
    - `list_variations` for variations Issued or Awaiting AI (value waiting on approval);
    - `get_programme` only where needed to flag slippage against the latest baseline or Liquidated Damages claims;
    - `get_package_reconciliation` for margin (forecast buying gain) where packages exist.
    One line per project: stage, headline commercial position, the one thing that matters this week.
 7. **Sales pipeline.** `list_leads` and `list_sales_strategies`: new leads this week, estimates due or submitted, wins and losses, total value in play where the portal gives it.
-8. **Risk and compliance.** `list_lapsed_cover_on_site` (subcontractors on site with lapsed insurance), `list_compliance_register`, `list_hs_audits` (latest audit outcome and open actions), `list_defects` on projects in DefectsPeriod.
+8. **Risk and compliance.** `list_lapsed_cover_on_site` (subcontractors on site with lapsed insurance), `list_compliance_register` (status Expired, and note the register's Missing count: a clean lapsed-cover check only covers firms with certificates on file), `list_hs_audits` with projectId "all" (latest audit outcome, and whether it has been issued), `list_defects` on projects in DefectsPeriod.
 9. **Actions.** `get_todo_brief` across all projects. Report counts, overdue items first, and anything owned by the Managing Director or Finance Director. Use the portal's `nextStep` wording.
 10. **Compare with last week** only if the previous report is available in this conversation or the person supplies it. Otherwise say "no prior report to compare against"; do not guess movements.
+
+Some reads (`get_aged_payables`, `get_todo_brief`) return more than fits in one tool result. Process the saved output with a script, read all of it, and total with code rather than by eye.
 
 Skip a step that fails, record it as an exception, and carry on. A partial report with visible gaps beats no report or a complete-looking one with invented figures.
 
@@ -60,7 +64,7 @@ Mark the report **Provisional** while any exception in section 8 affects a headl
 
 ## Delivery
 
-Return the report in the conversation. Do not email it, post it to the portal, create to-dos from it or commit it to GitHub; those need Nigel's say-so in that conversation. Schedule, cadence and recipients are not yet agreed (proposal: open decisions).
+Produce the report as a self-contained HTML file in the session scratchpad, styled to Jewel Bespoke Build's brand (Bespoke Navy #1A1E29, Bespoke Orange #FF8300, Jewel Gold #C09A51; Switzer headings, Geom Graphic body, system fallbacks), with the logo embedded when supplied. Summarise the headline in the conversation. Do not email it, post it to the portal, create to-dos from it or commit it to GitHub; those need Nigel's say-so in that conversation. Schedule, cadence and recipients are not yet agreed (proposal: open decisions).
 
 ## Completion condition
 
@@ -68,4 +72,5 @@ Every figure in the report has a source and date; every failed or qualified read
 
 ## Failure log
 
-- 28 September 2026: skill created for the Jewel pilot. Not yet run against live data; tool coverage and report shape to be tuned after the first runs.
+- 28 September 2026: skill created for the Jewel pilot.
+- 28 September 2026, first test run: (1) a draft said "£2.4m still to claim" using total contract value instead of value remaining; caught before release. Remedy: remaining value is revised contract sum less works complete, computed in code. (2) The 13-week plan has no future valuation income, so its closing balance looked like a forecast; remedy added to step 3. (3) September P&L showed a 98.9% gross margin because costs were still in draft; remedy added to step 4. (4) Two reads exceeded tool output limits; remedy added to run order.
