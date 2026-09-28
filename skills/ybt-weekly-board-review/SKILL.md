@@ -40,11 +40,40 @@ The weekly flash report from the YourBoardroomToday proposal (`projects/yourboar
 7. **Sales pipeline.** `list_leads` and `list_sales_strategies`: new leads this week, estimates due or submitted, wins and losses, total value in play where the portal gives it.
 8. **Risk and compliance.** `list_lapsed_cover_on_site` (subcontractors on site with lapsed insurance), `list_compliance_register` (status Expired, and note the register's Missing count: a clean lapsed-cover check only covers firms with certificates on file), `list_hs_audits` with projectId "all" (latest audit outcome, and whether it has been issued), `list_defects` on projects in DefectsPeriod.
 9. **Actions.** `get_todo_brief` across all projects. Report counts, overdue items first, and anything owned by the Managing Director or Finance Director. Use the portal's `nextStep` wording.
-10. **Compare with last week** only if the previous report is available in this conversation or the person supplies it. Otherwise say "no prior report to compare against"; do not guess movements.
+10. **CFO advice.** Apply the `jbb-virtual-cfo` principles to this week's figures (see "CFO advice section" below).
+11. **Compare with last week** only if the previous report is available in this conversation or the person supplies it. Otherwise say "no prior report to compare against"; do not guess movements.
 
 Some reads (`get_aged_payables`, `get_todo_brief`) return more than fits in one tool result. Process the saved output with a script, read all of it, and total with code rather than by eye.
 
 Skip a step that fails, record it as an exception, and carry on. A partial report with visible gaps beats no report or a complete-looking one with invented figures.
+
+## CFO advice section
+
+A short set of recommendations, not a repeat of the figures. **Three to five items**, most valuable first. Each item has:
+
+- **The finding** it answers, pointing to the section and figure it comes from;
+- **The action**, in one sentence, in Jewel's words;
+- **An owner** (a role: MD, FD, QS, PM, Accounts);
+- **A deadline** (a date, not "soon");
+- **The £ at stake**, where the data gives one; otherwise say "not quantifiable from this week's data".
+
+Run these standing tests every week and turn any failure into an advice item:
+
+| Test | Fails when |
+|---|---|
+| Cash not asked for | Any locked valuation has no invoice, or retention is past due |
+| Stretched creditors | The over-90-day payables balance rises week on week |
+| Overhead run-rate | The last full month's Xero overheads (including Consulting) are above the board's target |
+| Work-in-hand cover | Value still to be valued, divided by average monthly invoicing, is under 6 months, or new leads carry no value |
+| Tax and loans | Any HMRC instalment or loan payment missed, bounced or late |
+| Project health | Any live job where cost to date is higher than works value, or there's no budget to forecast against |
+| Books fit to report | The allocation queue or draft bills would distort this month's profit |
+
+Rules:
+
+- Advice is for directors to act on. Never carry it out yourself: no writes, no emails, no to-dos.
+- Don't give legal, tax or insolvency opinions. Where one is needed, the advice is "take advice from…".
+- Don't repeat last week's advice word for word. If an item is still open, show how many weeks it has been open and whether it has got worse.
 
 ## Report shape
 
@@ -57,10 +86,11 @@ Keep it to what a director can read in five minutes. Use tables for figures.
 5. **Sales pipeline**.
 6. **Risks and compliance**: lapsed cover, H&S, defects, anything contractual flagged for Nigel.
 7. **Actions and decisions**: overdue to-dos, and decision requests each with evidence, recommendation and who approves.
-8. **Data-quality exceptions**: failed reads, allocation backlog, mapping gaps, stale data.
-9. **Evidence**: for each headline figure, the tool, the record or report, and the as-at date.
+8. **CFO advice**: the three to five recommendations above, as a table (finding · action · owner · deadline · £ at stake).
+9. **Data-quality exceptions**: failed reads, allocation backlog, mapping gaps, stale data.
+10. **Evidence**: for each headline figure, the tool, the record or report, and the as-at date.
 
-Mark the report **Provisional** while any exception in section 8 affects a headline figure.
+Mark the report **Provisional** while any exception in section 9 affects a headline figure.
 
 ## Delivery
 
@@ -68,7 +98,7 @@ Produce the report as a self-contained HTML file in the session scratchpad, styl
 
 ## Completion condition
 
-Every figure in the report has a source and date; every failed or qualified read is listed as an exception; no action was taken in the portal or Xero; recommendations name who decides.
+Every figure in the report has a source and date; the CFO advice section has three to five owned, dated items; every failed or qualified read is listed as an exception; no action was taken in the portal or Xero; recommendations name who decides.
 
 ## Failure log
 
