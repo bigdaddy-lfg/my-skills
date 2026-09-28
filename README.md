@@ -14,6 +14,7 @@ projects/<project>/               Portable project context and handover files th
 | Skill | Purpose | Status |
 |---|---|---|
 | [proposal-evidence-and-commitment-control](skills/proposal-evidence-and-commitment-control/SKILL.md) | Stops business proposals and AI handovers turning brainstorms or competitor claims into commitments | Proposed, 28 Sep 2026 |
+| [jbb-virtual-cfo](skills/jbb-virtual-cfo/SKILL.md) | Virtual CFO for Jewel Bespoke Build: evidence-graded business intelligence report, project margins tender to final account, and 30/60/90-day advice | Draft, 28 Sep 2026; first run completed |
 | [ybt-weekly-board-review](skills/ybt-weekly-board-review/SKILL.md) | Weekly YourBoardroomToday flash report for Jewel Bespoke Build, read-only via the JewelBB Portal and Xero | Draft, 28 Sep 2026; not yet run on live data |
 
 ## Projects
