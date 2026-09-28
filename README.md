@@ -14,18 +14,19 @@ projects/<project>/               Portable project context and handover files th
 | Skill | Purpose | Status |
 |---|---|---|
 | [proposal-evidence-and-commitment-control](skills/proposal-evidence-and-commitment-control/SKILL.md) | Stops business proposals and AI handovers turning brainstorms or competitor claims into commitments | Proposed, 28 Sep 2026 |
+| [ybt-weekly-board-review](skills/ybt-weekly-board-review/SKILL.md) | Weekly YourBoardroomToday flash report for Jewel Bespoke Build, read-only via the JewelBB Portal and Xero | Draft, 28 Sep 2026; not yet run on live data |
 
 ## Projects
 
 | Project | File | Version / date | Status |
 |---|---|---|---|
-| YourBoardroomToday (YBT) | [master-proposal-v2.0.md](projects/yourboardroomtoday/master-proposal-v2.0.md) | 2.0, 28 Sep 2026 | Proposal for director scoping review; not approved to build or launch |
+| YourBoardroomToday (YBT) | [master-proposal.md](projects/yourboardroomtoday/master-proposal.md) | 2.1, 28 Sep 2026 | Proposal for director scoping review; Jewel pilot confirmed; not approved to build or launch |
 
 ### YourBoardroomToday pilot
 
-Jewel (https://www.jewelbb.co.uk/) is intended as the first test business, with weekly reviews to be scheduled via connectors. No review skill or schedule exists yet.
+Jewel Bespoke Build Ltd (https://www.jewelbb.co.uk/) is the first test business (confirmed 28 Sep 2026). Weekly reviews read the JewelBB Portal (`https://mcp.jewelbb.co.uk/api/mcp`) and Xero connectors using [ybt-weekly-board-review](skills/ybt-weekly-board-review/SKILL.md). The schedule is not yet set.
 
-Note: the handover instructions in the v2.0 proposal say to "keep this venture separate from Jewel". Using Jewel as the pilot client is a change of direction, so record it as confirmed direction (with its data-handling authority) in the next proposal revision.
+Skills are stored here only, not in the JewelBB Portal's skill store. Jewel's business data is never committed to this repository.
 
 ## Adding a skill
 

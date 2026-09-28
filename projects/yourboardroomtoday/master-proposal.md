@@ -4,7 +4,7 @@ YourBoardroomToday is the proposed AI-led boardroom layer above the connected To
 
 | Document control | Detail |
 |---|---|
-| Version | 2.0, incorporating the Nume-inspired additions |
+| Version | 2.1, recording Jewel Bespoke Build Ltd as the first pilot business (2.0 incorporated the Nume-inspired additions) |
 | Current as at | 28 September 2026 |
 | Sponsor / originator | Nigel Reilly |
 | Intended audience | Directors of Your Business Today Ltd and AI models assisting with the project |
@@ -13,7 +13,7 @@ YourBoardroomToday is the proposed AI-led boardroom layer above the connected To
 | Status | Nigel has authorised incorporating the Nume features into this proposal. Build funding, delivery ownership, pricing and launch approval remain unconfirmed |
 | Supersedes | The substantive proposal content in `YourBoardroomToday_Proposal_to_Directors.pdf`, dated 26 September 2026 |
 | Related earlier document | `Today_Ecosystem_Data_Flow_One_Page.pdf`; an updated text-based flow is included below |
-| Distribution status | The earlier PDFs were emailed to Nigel on 26 September. This revision is supplied as Markdown; it has not been emailed or placed on the live YBT project list |
+| Distribution status | The earlier PDFs were emailed to Nigel on 26 September. This revision is held as Markdown in Nigel's `my-skills` GitHub repository; it has not been emailed or placed on the live YBT project list |
 
 ## How to read and reuse this file
 
@@ -25,7 +25,7 @@ This is a self-contained proposal, not a transcript and not proof that the servi
 - **Open decision:** something still requiring a named owner, investigation or approval.
 - **Superseded wording:** earlier statements that must not be carried into new proposals or marketing.
 
-This file deliberately contains no client records, credentials or confidential third-party financial data. Any future upload of client information to another model must be separately authorised and checked against the applicable data-handling arrangements.
+This file deliberately contains no client records, credentials or confidential third-party financial data. Any future upload of client information to another model must be separately authorised and checked against the applicable data-handling arrangements. The one authorisation given so far is Nigel's, for Jewel Bespoke Build Ltd's own data in the pilot described under **Jewel pilot** below.
 
 ## Executive proposal
 
@@ -65,8 +65,25 @@ Automation should reduce routine labour, not remove accountability. Every tier m
 | 26 September 2026 | Create a five-business diagram and proposal for directors to add to the YBT project list | Include both the operating model and a ready-to-use project entry |
 | 27 September 2026 | Assess what could be added from Nume | Use Nume as an additional product benchmark |
 | 28 September 2026 | Add the Nume features and provide the proposal and everything as Markdown for other models | Incorporate the additions and preserve decisions, dependencies and safeguards in one portable file |
+| 28 September 2026 | Jewel Bespoke Build Ltd (https://www.jewelbb.co.uk/) is the first test business; weekly reviews will run via connectors while the agent is perfected, then YBT rolls out to other companies | Jewel becomes the pilot business. The v2.0 instruction to keep this venture separate from Jewel no longer applies to this pilot |
+| 28 September 2026 | Nigel's skills are stored in his `my-skills` GitHub repository only | Weekly review and other YBT skills are kept in GitHub, not in the JewelBB Portal's own skill store |
 
 The service names and intended relationships are confirmed planning inputs. Their separate legal entities, operating readiness, integrations and current delivery capabilities have not been established by this discussion.
+
+## Jewel pilot
+
+**Confirmed direction (28 September 2026):** Jewel Bespoke Build Ltd is the first business YourBoardroomToday is tested on. Nigel, as Jewel's managing and finance director, authorised read access to Jewel's data for this purpose through two connectors, both confirmed connected on 28 September 2026:
+
+- **JewelBB Portal** (`https://mcp.jewelbb.co.uk/api/mcp`): Jewel's project-management system: projects, valuations, variations, work orders, cash plan, to-dos, compliance, leads and the portal's own working rules.
+- **Xero**: the organisation "Jewel Bespoke Build Ltd".
+
+What this does and does not establish:
+
+- Jewel's data reaches the boardroom directly from the portal and Xero. It does not run through YourBooksToday, YourBrandToday, YourBusinessToday or YourBrainToday, and the pilot does not show that those services are operational.
+- Where the portal and Xero disagree, the portal's own rules decide which figure is quoted. For example, aged payables and receivables come from the portal because Xero holds some bills in draft deliberately.
+- The first slice is a weekly review, run in read-only mode. The review writes nothing to the portal or Xero, and sends nothing.
+- The schedule, cadence and recipients of the weekly review are not yet set.
+- Using Jewel as the pilot does not make Jewel's data available to other YBT clients, benchmarking or third parties.
 
 ## The five-business ecosystem
 
@@ -422,7 +439,7 @@ These are proposed controls and due-diligence tasks, not a legal opinion or a st
 | Scope and ownership | Confirm client segment, service bundle, legal/trading structure, owners, feature priorities and budget | Directors approve a bounded scope and pilot spend |
 | Data and control foundation | Establish source mapping, YourBrainToday records, permissions, metric definitions and quality checks | One test client's authorised data reconciles and isolation tests pass |
 | Core boardroom | Pack, weekly report, basic cash/budget reporting, evidence-backed questions, action plan and alerts | End-to-end cycle works without unsupported figures or unauthorised actions |
-| Pilot | Suggested one or two suitable clients over a full quarter, subject to approval | Reliability, usefulness and delivery economics demonstrated |
+| Pilot | Jewel Bespoke Build Ltd first (confirmed 28 September 2026), running weekly reviews; a second client subject to director approval | Reliability, usefulness and delivery economics demonstrated |
 | Controlled launch | Finalise tiers, terms, support limits, onboarding, ownership and service promises | Directors approve launch on measured evidence |
 | Expansion | Advanced scenarios, shareholder views, richer people/operations features, peer services and benchmarking | Each addition passes its own cost, evidence and control review |
 
@@ -449,7 +466,7 @@ Numerical service targets, acceptance tolerances and financial success threshold
 | Business context | Premium strategic layer across the connected Today services |
 | Sponsor | Nigel Reilly |
 | Delivery lead | To be appointed |
-| Status | Proposal ready for director scoping review; live project-list entry not confirmed |
+| Status | Proposal ready for director scoping review; Jewel pilot confirmed by Nigel; live project-list entry not confirmed |
 | Objective | Convert current financial, commercial and operational evidence into goals, reports, warnings and accountable action |
 | Core dependencies | YourBooksToday, YourBrandToday, YourBusinessToday and YourBrainToday, with agreed data and delivery ownership |
 | First deliverable | Approved scope, architecture, build-or-buy decision and costed pilot |
@@ -457,7 +474,7 @@ Numerical service targets, acceptance tolerances and financial success threshold
 | Explicit exclusion | Bank-advisor service, finance broking, loan introductions and autonomous money movement |
 | Budget | Not yet agreed |
 | Target dates | To be set after dependency and resource review |
-| Proposed pilot | One or two suitable clients over a full quarter, subject to director approval |
+| Pilot | Jewel Bespoke Build Ltd first, weekly reviews via the JewelBB Portal and Xero connectors; a second client subject to director approval |
 | Launch gate | Evidence of reliability, data controls, client usefulness and viable delivery economics |
 
 ## Open decisions and dependencies
@@ -469,7 +486,7 @@ Numerical service targets, acceptance tolerances and financial success threshold
 | Which services are operational | Determines the real starting point and pilot dependencies | Leads of the five services |
 | Client segment and complexity | Determines metrics, integrations, implementation effort and support | Directors |
 | Detailed YourBooksToday scope | Confirms whether payroll, VAT work and filings are included | Books service lead |
-| Source systems | Xero was suggested earlier, not selected by Nigel as the mandatory platform | Technical and books leads |
+| Source systems | Xero was suggested earlier, not selected by Nigel as the mandatory platform. The Jewel pilot uses Xero and the JewelBB Portal because they are Jewel's systems; that does not make them mandatory for other clients | Technical and books leads |
 | Finance review model | Defines competence, review thresholds and responsibility | Directors and finance lead |
 | Feature priority | Prevents the entire catalogue becoming a launch commitment | Product/delivery lead |
 | Human-time allowance and pricing | Determines viability of an automation-led service | Directors |
@@ -537,8 +554,12 @@ Use the open decisions to ask only the questions necessary for the next task.
 For external competitor, legal, security or pricing claims, recheck current
 primary sources before making commitments or publishing.
 
-Keep this venture separate from Jewel and other independently owned businesses.
-No client financial or personal information may be disclosed to another model
+Jewel Bespoke Build Ltd is the first pilot business (confirmed by Nigel,
+28 September 2026). Its data is read through the JewelBB Portal and Xero
+connectors for the pilot only; keep it out of other clients' work,
+benchmarking and marketing. Keep this venture separate from other
+independently owned businesses.
+No other client financial or personal information may be disclosed to another model
 or third party without the required authority and data-handling checks.
 
 When revising this file, update its date and version, preserve the decision
@@ -554,5 +575,7 @@ publishing or changing a live project list.
 - **27 September 2026:** Nume reviewed as an additional product benchmark and candidate feature source.
 - **28 September 2026:** Nigel requested incorporation of those features and a complete portable Markdown file.
 - **Version 2.0 changes:** consolidated the service catalogue, added the Nume feature mapping, updated the logical data flow, added evidence and approval controls, preserved open decisions and corrected unsupported earlier claims.
+- **28 September 2026, version 2.1:** Nigel confirmed Jewel Bespoke Build Ltd as the first pilot business, with weekly reviews via the JewelBB Portal and Xero connectors, and GitHub as the only store for his skills. Added the Jewel pilot section; updated the pilot, project entry, source systems and handover instruction.
+- **Superseded in 2.1:** the v2.0 handover line "Keep this venture separate from Jewel and other independently owned businesses" (now: Jewel is the pilot; other independently owned businesses stay separate), and "one or two suitable clients" as the unnamed pilot.
 
 The next recommended step is a director scoping review that appoints a delivery lead and agrees the initial product slice, dependencies and costed pilot. Nothing in this document should be taken as approval to build or launch the full catalogue.
