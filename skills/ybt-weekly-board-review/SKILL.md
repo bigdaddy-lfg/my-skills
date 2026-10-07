@@ -64,6 +64,8 @@ Run these standing tests every week and turn any failure into an advice item:
 | Cash not asked for | Any locked valuation has no invoice, or retention is past due |
 | Stretched creditors | The over-90-day payables balance rises week on week |
 | Overhead run-rate | The last full month's Xero overheads (including Consulting) are above the board's target |
+
+Consulting context (Nigel, 7 Oct 2026): Consulting includes James Beadle (software developer and QS) and Andrew Prior (IT and security), who replaced some of the roles cut in 2026. Their costs are being re-allocated to the correct accounts (Jeremy is resolving). Until that is done, show Consulting separately with this note, and judge the overhead test on total staff plus consulting cost rather than flagging the rise as unexplained.
 | Work-in-hand cover | Value still to be valued, divided by average monthly invoicing, is under 6 months, or new leads carry no value |
 | Tax and loans | Any HMRC instalment or loan payment missed, bounced or late |
 | Project health | Any live job where cost to date is higher than works value, or there's no budget to forecast against |
@@ -94,7 +96,7 @@ Mark the report **Provisional** while any exception in section 9 affects a headl
 
 ## Delivery
 
-Produce the report as a self-contained HTML file in the session scratchpad, styled to Jewel Bespoke Build's brand (Bespoke Navy #1A1E29, Bespoke Orange #FF8300, Jewel Gold #C09A51; Switzer headings, Geom Graphic body, system fallbacks), with the logo embedded when supplied. Summarise the headline in the conversation. Do not email it, post it to the portal, create to-dos from it or commit it to GitHub; those need Nigel's say-so in that conversation. Schedule, cadence and recipients are not yet agreed (proposal: open decisions).
+Produce the report as a self-contained HTML file in the session scratchpad, styled to Jewel Bespoke Build's brand (Bespoke Navy #1A1E29, Bespoke Orange #FF8300, Jewel Gold #C09A51; Switzer headings, Geom Graphic body, system fallbacks), with the logo embedded when supplied. Summarise the headline in the conversation. Do not email it, post it to the portal, create to-dos from it or commit it to GitHub; those need Nigel's say-so in that conversation. Schedule agreed 7 October 2026: every Monday at 06:47 UK time, as a Routine that fires into the JewelBB Financial CEO project thread and delivers the report to Nigel there as a PDF (also saved under `/mnt/project-files/reports/weekly/` when the shared folder exists). Wider circulation still needs Nigel's say-so.
 
 ## Completion condition
 
